@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Fetch weather and spotlight data for the home page
     await fetchWeather();
     await fetchSpotlights();
-    await loadIndexEvents();
+    await loadIndexEvents(); // Load events into the #events section
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -216,7 +216,22 @@ window.addEventListener("DOMContentLoaded", () => {
     if (timestampElement) {
         timestampElement.value = new Date().toISOString();
     }
+
+    highlightCurrentPage();
 });
+
+function highlightCurrentPage() {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+}
 
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -235,15 +250,32 @@ function closeModal(modalId) {
 }
 
 const params = new URLSearchParams(window.location.search);
-const fields = ["firstName", "lastName", "email", "phone", "business", "timestamp"];
-const list = document.getElementById("confirmationDetails");
+        const fields = ["firstName", "lastName", "email", "phone", "business", "timestamp"];
+        const list = document.getElementById("confirmationDetails");
+      
+        fields.forEach(field => {
+          if (params.has(field)) {
+            const li = document.createElement("li");
+            li.textContent = `${field.replace(/([A-Z])/g, " $1")}: ${params.get(field)}`;
+            list.appendChild(li);
+          }
+        });
 
-fields.forEach(field => {
-    if (params.has(field)) {
-        const li = document.createElement("li");
-        li.textContent = `${field.replace(/([A-Z])/g, " $1")}: ${params.get(field)}`;
-        list.appendChild(li);
-    }
+function displayCurrentPageName() {
+    const header = document.querySelector("header");
+    const currentPage = window.location.pathname.split("/").pop().replace(".html", "");
+    const formattedPageName = currentPage.charAt(0).toUpperCase() + currentPage.slice(1);
+
+    const pageNameElement = document.createElement("div");
+    pageNameElement.className = "current-page-name mobile-only";
+    pageNameElement.textContent = formattedPageName === "Index" ? "Home" : formattedPageName;
+
+    header.insertBefore(pageNameElement, header.querySelector("nav"));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    displayCurrentPageName();
+    // ...existing code...
 });
 
 async function loadIndexEvents() {

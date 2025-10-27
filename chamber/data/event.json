@@ -1,0 +1,61 @@
+{
+    "events": [
+      {
+        "title": "Spring Business Expo",
+        "date": "2025-04-25",
+        "location": "Timbuktu Cultural Center",
+        "description": "Network with 100+ local businesses, enjoy keynote speeches, and discover new opportunities.",
+        "cta": "Register"
+      },
+      {
+        "title": "Monthly Networking Lunch",
+        "date": "2025-05-15",
+        "location": "Chamber HQ, Conference Room B",
+        "description": "Join fellow entrepreneurs and community leaders for lunch and collaboration.",
+        "cta": "RSVP"
+      },
+      {
+        "title": "Small Business Webinar",
+        "date": "2025-06-05",
+        "location": "Online (Zoom Link Provided)",
+        "description": "Learn how to build digital marketing strategies for small business success.",
+        "cta": "Join Webinar"
+      },
+      {
+        "title": "Women in Business Forum",
+        "date": "2025-07-10",
+        "location": "Timbuktu Civic Hall",
+        "description": "Celebrate and empower women leaders with keynote sessions, networking, and mentorship panels.",
+        "cta": "Reserve Spot"
+      },
+      {
+        "title": "Annual Chamber Gala",
+        "date": "2025-08-22",
+        "location": "Grand Timbuktu Hotel Ballroom",
+        "description": "An elegant evening to honor member achievements and raise funds for local initiatives.",
+        "cta": "Get Tickets"
+      },
+      {
+        "title": "Chamber Volunteer Day",
+        "date": "2025-09-18",
+        "location": "City Park Community Center",
+        "description": "Give back to the community by participating in service projects and outreach programs.",
+        "cta": "Sign Up"
+      },
+      {
+        "title": "Local Vendor Market",
+        "date": "2025-10-03",
+        "location": "Timbuktu Town Square",
+        "description": "Support local vendors and artisans while enjoying food trucks and live entertainment.",
+        "cta": "View Details"
+      },
+      {
+        "title": "Cybersecurity for Business Owners",
+        "date": "2025-11-12",
+        "location": "Chamber HQ, Tech Lab Room 3",
+        "description": "Protect your organization with tools and strategies to improve digital safety.",
+        "cta": "Register Now"
+      }
+    ]
+  }
+  

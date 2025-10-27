@@ -452,4 +452,10 @@ iframe {
     transition: transform 0.3s ease-in-out;
   }
 }
-  
+
+/* Hide the current page name on larger screens */
+@media (min-width: 769px) {
+  .current-page-name {
+    display: none;
+  }
+}
